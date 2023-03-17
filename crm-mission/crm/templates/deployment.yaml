@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: demo-crm
+  name: demo-crmo
+      containers:
+      - image: pwstaging/demo-crm:latest
+        name: demo-crm
+        env:
+        - name: MONGODB_URI
+          value: "mongodb://root:123456@db-mongodb:27017"
+
+         
+status: {}
